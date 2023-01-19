@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* group utilities */
+@layer components{
+    .btn-purple{
+        @apply font-medium text-[1rem] leading-none rounded-md bg-white hover:bg-indigo-500 text-black hover:text-white focus:ring-2 focus:ring-white px-4 py-2;
+    }
+    .bg-image-banner{
+        background-image: url(../images/bgBannerMan.jpg) ;
+    }
+    .bg-image-after{
+        background-image: url(../images/arrow-spiral-2.png);
+    }
+    
+    .logo_width>*{
+        width: 6rem;
+        margin: 1rem 1rem; 
+    }
+    .logo_width_sm>*{
+        width: 4.5rem;
+        margin: .5rem .5rem; 
+    }
+    .transition_li>*{
+        @apply transition-all ease-in-out delay-150 duration-300
+    }
+    
+}
+

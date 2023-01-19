@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel='stylesheet' href='./output/tailwind.css'>
+</head>
+<body>
+    <header class="bg-[#F8F6F7]">
+        <div class='md:container mx-auto px-4 md:px-0'>
+            <nav class="">
+                <div class="mx-auto px-2 lg:px-8">
+                  <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                      <!-- Mobile menu button-->
+                      <button type="button" class="inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                          Icon when menu is closed.
+              
+                          Heroicon name: outline/bars-3
+              
+                          Menu open: "hidden", Menu closed: "block"
+                        -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+                          Icon when menu is open.
+              
+                          Heroicon name: outline/x-mark
+              
+                          Menu open: "block", Menu closed: "hidden"
+                        -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                      <div class="flex flex-shrink-0 items-center">
+                        <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                        <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                      </div>
+                      <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                          <a href="#" class="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+              
+                          <a href="#" class="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
+              
+                          <a href="#" class="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+              
+                          <a href="#" class="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:pr-0 hidden sm:block">
+                      <button type="button" class="">
+                        <span class="btn-purple  bg-[#F8F6F7]">Log in</span>
+                      </button>
+                      <button type="button" class="">
+                        <span class="btn-purple ml-6 bg-[#F8F6F7]">Log in</span>
+                      </button>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Mobile menu, show/hide based on menu state. -->
+                <div class="sm:hidden" id="mobile-menu">
+                  <div class="space-y-1 px-2 pt-2 pb-3">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    
+                    <a href="#" class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+
+                    <a href="#" class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+              
+                    <a href="#" class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+              
+                    <a href="#" class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+                    <a href="#" class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                        <div class="flex flex-wrap items-center ">
+                            <span class="btn-purple bg-[#F8F6F7]">Log in</span>
+                            <span class="btn-purple ml-6 bg-[#F8F6F7]">Log in</span>
+                        </div>
+                    </a>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </header>
+    <section id="banner " class="md:bg-[#F8F6F7] md:pt-28">
+        <div class='md:container md:mx-auto px-4 relative pt-20 pb-[6.25rem] bg-cover bg-center z-0 md:bg-none bg-image-banner '  >
+            <div class="w-full h-full absolute top-0 left-0 px-4 bg-black/[.3]  z-[-1] md:hidden"></div>
+            <img class="hidden md:block absolute h-full w-5/12 inset-y-0 right-0 rounded-tr-[50px] rounded-bl-[50px] z-[-1]" src='./images/bgBannerMan.jpg' alt=''>
+            <div class="flex flex-wrap flex-col items-center md:items-start text-center md:text-start space-y-8 px-4 md:px-0 " >
+                <h1 class="text-[2.75rem] sm:text-[3rem] leading-[3.5rem] font-bold text-white md:text-black md:max-w-[75%]   ">Lorem ipsum dolor sit amet, consectetur adipisicing fugiat.</h1>
+                <p class="text-white md:text-[#4F5561] md:max-w-[50%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas libero eligendi eos consequatur. Porro, iste sit! Aliquid distinctio explicabo architecto.</p>
+                <div class="flex flex-wrap items-center ">
+                    <span class="btn-purple  border border-gray-400">Demo</span>
+                    <span class="btn-purple ml-6 border border-gray-400">Log in</span>
+                </div>
+            </div> 
+        </div>
+        <div class='md:container md:mx-auto mx-4 py-[2.5rem]'>
+            <div>
+                <ul class="flex flex-wrap justify-evenly md:justify-between items-center logo_width sm:logo_width_sm">
+                    <li><a href='#'><img src='./images/Coinbase_logo.png' alt=''></a></li>
+                    <li><a href='#'><img src='./images/Spotify_Logo.png' alt=''></a></li>
+                    <li><a href='#'><img src='./images/Slack_logo.png' alt=''></a></li>
+                    <li><a href='#'><img src='./images/Dropbox_logo.png' alt=''></a></li>
+                    <li><a href='#'><img src='./images/Webflow_logo.png' alt=''></a></li>
+                    <li><a href='#'><img src='./images/zoom-logo2.png' alt=''></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="integration">
+        <div class='md:container mx-4 md:mx-auto my-14'>
+            <div class="flex flex-wrap justify-center items-center text-center flex-col w-full">
+                <h6 class="text-sm font-medium text-indigo-500 mb-4">integration</h6>
+                <h1 class="text-3xl font-bold mb-5">Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+                <p class="text-sm text-[#3B3F48] sm:max-w-[70%] mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis praesentium quae aspernatur nobis quam expedita laboriosam error inventore neque dicta quibusdam cum perferendis  ducimus quod sed fuga voluptatibus, iste consectetur</p>
+                <div class="flex flex-wrap justify-between items-center w-full mt-20">
+                    <div class="sm:w-6/12 md:w-1/3 mb-20">
+                        <div class="flex flex-wrap flex-col justify-center items-center px-2.5 pt-10 pb-6  relative bg-[#F8F6F7] rounded-lg mx-3">
+                            <div class="w-12 h-12 absolute top-[-25px]">
+                                <img src='./images/notion_just.png' alt=''>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2 ">Lorem ipsum dolor</h3>
+                            <p class="text-[#3B3F48] text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium laborum ullam voluptatum molestiae accusamus fugiat!</p>
+                        </div>
+                    </div>
+                    <div class="sm:w-6/12 md:w-1/3 mb-20">
+                        <div class="flex flex-wrap flex-col justify-center items-center px-2.5 pt-10 pb-6  relative bg-[#F8F6F7] rounded-lg mx-3">
+                            <div class="w-12 h-12 absolute top-[-25px]">
+                                <img src='./images/Slack_icon.png' alt=''>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2 ">Lorem ipsum dolor</h3>
+                            <p class="text-[#3B3F48] text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium laborum ullam voluptatum molestiae accusamus fugiat!</p>
+                        </div>
+                    </div>
+                    <div class="sm:w-6/12 md:w-1/3 mb-20">
+                        <div class="flex flex-wrap flex-col justify-center items-center px-2.5 pt-10 pb-6  relative bg-[#F8F6F7] rounded-lg mx-3">
+                            <div class="w-12 h-12 absolute top-[-25px]">
+                                <img src='./images/Google_Drive_icon2.png' alt=''>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2 ">Lorem ipsum dolor</h3>
+                            <p class="text-[#3B3F48] text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium laborum ullam voluptatum molestiae accusamus fugiat!</p>
+                        </div>
+                    </div>
+                    <div class="sm:w-6/12 md:w-1/3 mb-20">
+                        <div class="flex flex-wrap flex-col justify-center items-center px-2.5 pt-10 pb-6  relative bg-[#F8F6F7] rounded-lg mx-3">
+                            <div class="w-12 h-12 absolute top-[-25px]">
+                                <img src='./images/interco_icon.png' alt=''>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2 ">Lorem ipsum dolor</h3>
+                            <p class="text-[#3B3F48] text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium laborum ullam voluptatum molestiae accusamus fugiat!</p>
+                        </div>
+                    </div>
+                    <div class="sm:w-6/12 md:w-1/3 mb-20">
+                        <div class="flex flex-wrap flex-col justify-center items-center px-2.5 pt-10 pb-6  relative bg-[#F8F6F7] rounded-lg mx-3">
+                            <div class="w-12 h-12 absolute top-[-25px]">
+                                <img src='./images/jira_icon.png' alt=''>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2 ">Lorem ipsum dolor</h3>
+                            <p class="text-[#3B3F48] text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium laborum ullam voluptatum molestiae accusamus fugiat!</p>
+                        </div>
+                    </div>
+                    <div class="sm:w-6/12 md:w-1/3 mb-20">
+                        <div class="flex flex-wrap flex-col justify-center items-center px-2.5 pt-10 pb-6  relative bg-[#F8F6F7] rounded-lg mx-3">
+                            <div class="w-12 h-12 absolute top-[-25px]">
+                                <img src='./images/dropbox-icon.png' alt=''>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2 ">Lorem ipsum dolor</h3>
+                            <p class="text-[#3B3F48] text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium laborum ullam voluptatum molestiae accusamus fugiat!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="bg-[#F8F6F7]">
+        <div class='md:container mx-4 md:mx-auto py-20'>
+            <div class="flex flex-wrap justify-center items-center text-center flex-col w-full">
+                <h6 class="text-sm font-medium text-indigo-500 mb-4">Features</h6>
+                <h1 class="text-3xl font-bold mb-5">Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+                <p class="text-sm text-[#3B3F48] sm:max-w-[70%] mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis praesentium quae aspernatur nobis quam expedita laboriosam error inventore neque dicta quibusdam cum perferendis  ducimus quod sed fuga voluptatibus, iste consectetur</p>
+                <div class="flex flex-wrap justify-between items-center w-full mt-12">
+                    <div class="w-full md:mx-4">
+                        <img class="w-full" src='./images/welcome_Screenshot_2.png' alt=''>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="thunder" class="py-14">
+        <div class='md:container mx-4 md:mx-auto'>
+            <div class="flex flex-wrap flex-col justify-center items-center text-center">
+                <div class="flex flex-wrap justify-center items-center mb-5">
+                    <div class="flex flex-wrap justify-center items-center p-2.5  bg-gray-300 rounded-full">
+                        <i class="fa-solid fa-bolt-lightning w-7 leading-7 text-indigo-500"></i>
+                    </div>
+                </div>
+                <h1 class="text-3xl font-bold mb-6 md:max-w-[80%]">Lorem ipsum dolor consectetur adipisicing dolor</h1>
+                <p class="text-sm text-[#696D76] mb-10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor corporis asperiores.</p>
+                <div class="flex flex-wrap justify-center flex-col sm:flex-row  items-center w-full md:max-w-[80%]">
+                    <div class="flex flex-wrap flex-col justify-center  items-center  w-1/3 sm:border-r-2 border-gray-300 mb-8">
+                        <h1 class="text-5xl text-indigo-500 font-semibold mb-5 tracking-tight">40+</h1>
+                        <p class="font-bold text-sm">Intregations</p>
+                    </div>
+                    <div class="flex flex-wrap flex-col justify-center  items-center  w-1/3 sm:border-r-2 border-gray-300 mb-8">
+                        <h1 class="text-5xl text-indigo-500 font-semibold mb-5 tracking-tight">600%</h1>
+                        <p class="font-bold text-sm">Intregations</p>
+                    </div>
+                    <div class="flex flex-wrap flex-col justify-center  items-center  w-1/3 mb-8">
+                        <h1 class="text-5xl text-indigo-500 font-semibold mb-5 tracking-tight ">4k+</h1>
+                        <p class="font-bold text-sm">Intregations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="trial" class="bg-[#F8F6F7] mb-16 ">
+        <div class='md:container mx-4 md:mx-auto'>
+            <div class="flex flex-wrap justify-between flex-col md:flex-row items-start  md:items-center w-full px-5 py-12">
+                <div class="flex flex-wrap flex-col justify-center items-start md:pr-8 mb-8">
+                    <h1 class="text-2xl font-bold mb-5 ">Orem dolor 30days+ free adipisicing.</h1>
+                    <p class="text-xs text-[#696D76]">Lorem, ipsum dolor sit amet consectetur adipisicing Earum repudiandae at id. Laborum, harum aspernatur</p>
+                </div>
+                <div>
+                    <button class="btn-purple border border-gray-300 mb-8">Learn more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sisyphus" class="py-14 bg-[#F8F6F7]">
+        <div class='md:container mx-4 md:mx-auto'>
+            <div class="flex flex-wrap flex-col justify-center items-center text-center">
+                <div class="flex flex-wrap justify-center items-center mb-5">
+                    <div class="w-5">
+                        <img src='./images/thunder_green.png' alt=''>
+                    </div>
+                    <h3 class="ml-2 font-bold ">Sisyphus</h3>
+                </div>
+                <h1 class="text-3xl font-bold mb-7 md:max-w-[80%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolore sit, iure repellendus ipsam nobis.</h1>
+                <div class="flex flex-wrap flex-col justify-center items items-center">
+                    <div class="w-12 h-12 overflow-hidden rounded-full mb-3">
+                        <img src='./images/jawad_pic.JPG' alt=''>
+                    </div>
+                    <h3 class="font-bold mb-1">Tasnimul hasan </h3>
+                    <p class="text-xs text-[#696D76]">Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="join " >
+        <div class='md:container mx-4 md:mx-auto px-4 pt-20 pb-[6.25rem]'  >
+            <div class="flex flex-wrap flex-col md:flex-row md:justify-between lg:justify-evenly w-full">
+                <div class="flex flex-wrap flex-col items-start md:text-start space-y-5 px-4 md:px-0 mb-8 md:max-w-[40%]" >
+                    <h1 class="text-4xl leading-[3rem] font-semibold text-black ">Ipsum dolor 4000+ sit amet adipisicing fugiat</h1>
+                    <div>
+                        <ul class="ml-5 space-y-3 flex flex-wrap flex-col justify-center items-start transition_li">
+                            <li class="md:text-[#4F5561] flex flex-wrap justify-center items-center leading-none hover:ml-4">
+                                <span class="bg-[#F4EBFE] rounded-full p-1 text-[#9A79E4]"><i class="fa-regular fa-circle-check "></i></span>
+                                <p class="text-xs text-[#93979D]">30 days free trial</p>
+                            </li>
+                            <li class="md:text-[#4F5561] flex flex-wrap justify-center items-center leading-none hover:ml-4">
+                                <span class="bg-[#F4EBFE] rounded-full p-1 text-[#9A79E4]"><i class="fa-regular fa-circle-check "></i></span>
+                                <p class="text-xs text-[#93979D]">Lorem ipsum dolor sit amet.</p>
+                            </li>
+                            <li class="md:text-[#4F5561] flex flex-wrap justify-center items-center leading-none hover:ml-4">
+                                <span class="bg-[#F4EBFE] rounded-full p-1 text-[#9A79E4]"><i class="fa-regular fa-circle-check "></i></span>
+                                <p class="text-xs text-[#93979D]">Lorem, ipsum dolor free trial</p>
+                            </li>
+                            <li class="md:text-[#4F5561] flex flex-wrap justify-center items-center leading-none hover:ml-4">
+                                <span class="bg-[#F4EBFE] rounded-full p-1 text-[#9A79E4]"><i class="fa-regular fa-circle-check "></i></span>
+                                <p class="text-xs text-[#93979D]">days free Lorem,ipsum trial</p>
+                            </li>
+                            <li class="md:text-[#4F5561] flex flex-wrap justify-center items-center leading-none hover:ml-4">
+                                <span class="bg-[#F4EBFE] rounded-full p-1 text-[#9A79E4]"><i class="fa-regular fa-circle-check "></i></span>
+                                <p class="text-xs text-[#93979D]">30 days free trial</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap items-center ">
+                        <span class="btn-purple  border border-gray-400  text-[0.75rem] sm:text-[1rem]">Learn more</span>
+                        <span class="btn-purple ml-4 border border-gray-400 text-[0.75rem] sm:text-[1rem]">Get started</span>
+                    </div>
+                </div> 
+                <div class="flex flex-wrap flex-col items-start md:text-start space-y-5 px-4 md:px-0 md:max-w-[40%]" >
+                    <h1 class="text-4xl leading-[3rem] font-semibold text-black ">Ipsum dolor 4000+ sit amet adipisicing fugiat</h1>
+                    <div>
+                        <ul class="ml-5 space-y-3 flex flex-wrap flex-col justify-center items-start transition_li">
+                            <li class="md:text-[#4F5561] flex flex-wrap justify-center items-center leading-none hover:ml-4">
+                                <span class="bg-[#F4EBFE] rounded-full p-1 text-[#9A79E4]"><i class="fa-regular fa-circle-check "></i></span>
+                                <p class="text-xs text-[#93979D]">30 days free trial</p>
+                            </li>
+                            <li class="md:text-[#4F5561] flex flex-wrap justify-center items-center leading-none hover:ml-4">
+                                <span class="bg-[#F4EBFE] rounded-full p-1 text-[#9A79E4]"><i class="fa-regular fa-circle-check "></i></span>
+                                <p class="text-xs text-[#93979D]">Lorem ipsum dolor sit amet.</p>
+                            </li>
+                            <li class="md:text-[#4F5561] flex flex-wrap justify-center items-center leading-none hover:ml-4">
+                                <span class="bg-[#F4EBFE] rounded-full p-1 text-[#9A79E4]"><i class="fa-regular fa-circle-check "></i></span>
+                                <p class="text-xs text-[#93979D]">Lorem, ipsum dolor free trial</p>
+                            </li>
+                            <li class="md:text-[#4F5561] flex flex-wrap justify-center items-center leading-none hover:ml-4">
+                                <span class="bg-[#F4EBFE] rounded-full p-1 text-[#9A79E4]"><i class="fa-regular fa-circle-check "></i></span>
+                                <p class="text-xs text-[#93979D]">days free Lorem,ipsum trial</p>
+                            </li>
+                            <li class="md:text-[#4F5561] flex flex-wrap justify-center items-center leading-none hover:ml-4">
+                                <span class="bg-[#F4EBFE] rounded-full p-1 text-[#9A79E4]"><i class="fa-regular fa-circle-check "></i></span>
+                                <p class="text-xs text-[#93979D]">30 days free trial</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap items-center ">
+                        <span class="btn-purple  border border-gray-400 text-[0.75rem] sm:text-[1rem]">Learn more</span>
+                        <span class="btn-purple ml-4 border border-gray-400 text-[0.75rem] sm:text-[1rem]">Get started</span>
+                    </div>
+                </div> 
+            </div>
+            
+        </div>
+    </section>
+    <section id="trial" class="bg-[#F8F6F7] ">
+        <div class='md:container mx-4 md:mx-auto'>
+            <div class="flex justify-between flex-col md:flex-row items-start  md:items-start w-full px-5 py-12">
+                <div class="flex flex-wrap flex-col justify-center items-start md:pr-5 mb-10 md:w-[55%] lg:w-[60%]">
+                    <h1 class="text-4xl font-bold mb-5 ">Sign up free adipisicing.</h1>
+                    <p class="text-sm text-[#696D76]">Lorem, ipsum dolor sit amet consectetur adipisicing Earum repudiandae at id. Laborum, harum aspernatur</p>
+                </div>
+                <div class="flex flex-wrap flex-col md:flex-row justify-center items-start w-full md:w-[45%] lg:w-[40%] md:justify-between">
+                    <div class="flex flex-wrap flex-col justify-center items-start mb-5 w-full md:w-[65%] lg:w-[70%]">
+                        <input class="p-2.5 text-sm leading-none rounded-lg border border-gray-300 w-full max-w-[100%]  mb-3" type='email' placeholder="Enter your email">
+                        <p class="text-xs text-[#696D76]">
+                            Lorem ipsum dolor sit amet, adipisicing <span class="underline"><a href='#'>privacy policy</a></span>
+                        </p>
+                    </div>
+                    <button class="btn-purple border border-gray-300 p-3 lg:ml-4 max-w-fit md:ml-2">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-[#F8F6F7]">
+        <div class='py-16 md:container mx-4 md:mx-auto'>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  gap-5">
+                <div>
+                    <ul>
+                        <li class="flex flex-wrap items-center justify-start mb-2 h-6 group ">
+                            <a href='#' class="text-sm font-bold leading-none ">legal</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">lorem</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Ipsumnef</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">star</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Hundred </a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Old</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Muhammad</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li class="flex flex-wrap items-center justify-start mb-2 h-6 group ">
+                            <a href='#' class="text-sm font-bold leading-none ">legal</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">lorem</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Ipsumnef</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">star</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Hundred </a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Old</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Muhammad</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li class="flex flex-wrap items-center justify-start mb-2 h-6 group ">
+                            <a href='#' class="text-sm font-bold leading-none ">legal</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">lorem</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Ipsumnef</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">star</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Hundred </a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Old</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Muhammad</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li class="flex flex-wrap items-center justify-start mb-2 h-6 group ">
+                            <a href='#' class="text-sm font-bold leading-none ">legal</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">lorem</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Ipsumnef</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">star</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Hundred </a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Old</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Muhammad</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li class="flex flex-wrap items-center justify-start mb-2 h-6 group ">
+                            <a href='#' class="text-sm font-bold leading-none ">legal</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">lorem</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Ipsumnef</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">star</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Hundred </a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Old</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Muhammad</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li class="flex flex-wrap items-center justify-start mb-2 h-6 group ">
+                            <a href='#' class="text-sm font-bold leading-none ">legal</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">lorem</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Ipsumnef</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">star</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Hundred </a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Old</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        <li class="flex flex-wrap items-center justify-start h-6 group">
+                            <a href='#' class="text-sm font-semibold leading-none ">Muhammad</a>
+                            <p class="hidden text-[0.5rem] text-green-800 font-semibold px-2 py-1 bg-green-300 rounded-full ml-2.5 leading-none group-hover:block">New</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="md:container mx-4 py-10 md:mx-auto ">
+            <div class="flex flex-wrap items-center justify-between flex-col sm:flex-row">
+                <h1 class="font-bold text-lg">&#9830 Untiteld Ui</h1>
+                <p class="text-sm text-[#696D76] text-center">&#169 Lorem ipsum dolor sit amet consectetur adipisicing elit  Dolorum</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
